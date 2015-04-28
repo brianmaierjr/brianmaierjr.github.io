@@ -1,0 +1,11 @@
+# Site settings
+title: Brian Maier Jr.
+email: brimaidesigns@gmail.com
+description: Another butcher in the meatmarket
+baseurl: ""
+url: "http://brianmaierjr.com"
+twitter_username: brianmaierjr
+github_username:  brianmaierjr
+
+# Build settings
+markdown: kramdown

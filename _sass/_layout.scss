@@ -1,0 +1,199 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+
+    @include media-query($on-palm) {
+        width: auto;
+    }
+}
+
+
+/**
+ * Home Page
+ */
+.home {
+
+    .left-half,
+    .right-half {
+        position: fixed;
+        top: 0;
+    }
+
+    .left-half {
+        background-image: url('../images/left-bg.svg');
+        background-size: auto 90%;
+        background-position: center;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        background-color: #efefef;
+        background-repeat: no-repeat;
+
+        h1 {
+            font-size: 9vw;
+            line-height: 1;
+            color: $text-color;
+        }
+
+        nav {
+            ul {
+                text-align: center;
+
+                li {
+                    display: inline;
+                    list-style: none;
+
+                    a {
+                        padding: 0 .5em;
+                        color: darken(yellow, 20%);
+                    }
+
+                    &:hover {
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media-query($on-palm) {
+            width: 50vw;
+            height: 100vh;
+        }
+
+        .center {
+            text-align: center;
+        }
+    }
+
+    .right-half {
+        top: inherit;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 50vh;
+        background: $text-color;
+        color: white;
+
+        @include media-query($on-palm) {
+            width: 50vw;
+            height: 100vh;
+            top: 0;
+            bottom: inherit;
+        }
+
+        .center {
+            width: 70%;
+        }
+
+        h2 {
+            font-family: $sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: darken(white, 45%);
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: -1em;
+                left: 0;
+                width: 2em;
+                height: 4px;
+                background: darken(white, 45%);
+            }
+        }
+
+        p {
+            font-size: 1.4em;
+            line-height: 1.8;
+        }
+    }
+}
+
+/**
+ * Page content
+ */
+.page-content {
+    padding: $spacing-unit 0;
+}
+
+.page-heading {
+    font-size: 20px;
+}
+
+.post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+}
+
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+.post-link {
+    display: block;
+    font-size: 24px;
+}
+
+
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $spacing-unit;
+}
+
+.post-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.post-content {
+    margin-bottom: $spacing-unit;
+
+    h2 {
+        font-size: 32px;
+
+        @include media-query($on-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+}
