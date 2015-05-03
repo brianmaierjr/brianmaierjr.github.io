@@ -186,7 +186,6 @@ nav {
     .right-half {
         background: $text-color;
         color: white;
-        padding: 3em 0;
 
         .center {
             width: 90%;
@@ -218,7 +217,13 @@ nav {
 
         p {
             font-size: 1.4em;
-            line-height: 1.8; 
+            line-height: 1.8;
+        }
+
+        @media screen and (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
+            p {
+                font-size: 1em;
+            }
         }
     }
 }
@@ -310,9 +315,9 @@ nav {
 }
 
 .post-content {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit; 
 
-    h2 {
+    h2 { 
         font-size: 32px;
 
         @include media-query($on-laptop) {
