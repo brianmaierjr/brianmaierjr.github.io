@@ -68,12 +68,17 @@ module.exports = function(grunt) {
            files: ["scss/*.scss"],
            tasks: ["sass", "autoprefixer", "criticalcss", "shell:jekyllBuild"]
          }
+       },
+       concurrent: {
+           dev: ['shell:jekyllServe', 'watch'],
+           options: {
+               logConcurrentOutput: true
+           }
        }
-
     });
 
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask("serve", ["shell:jekyllServe"]);
-    grunt.registerTask("default", ["sass", "autoprefixer", "criticalcss", "shell:jekyllBuild", "watch"]);
+    grunt.registerTask("default", ["sass", "autoprefixer", "criticalcss",  "concurrent:dev"]);
 };
