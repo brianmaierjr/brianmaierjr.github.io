@@ -5,8 +5,23 @@
 
   <body>
 
+	<nav>
+	  	<a class="navicon-button x"  id="nav-toggle">
+	      <div class="navicon"></div>
+	    </a>
+
+	    <ul>
+	    	<li><a class="about" href="#" data-target="about">About</a></li>
+	    	<li><a class="projects" href="#" data-target="projects">Projects</a></li>
+	    	<li><a class="articles" href="#" data-target="articles">Articles</a></li>
+	    	<li><a class="contact" href="" data-target="contact">Contact</a></li>
+	    </ul>
+	</nav>
+
     {{ content }}
 
   </body>
+
+  {% include footer.html %}
 
 </html>

@@ -6,6 +6,10 @@ baseurl: "/portfolio-new"
 url: "http://brianmaierjr.com"
 twitter_username: brianmaierjr
 github_username:  brianmaierjr
+dribbble_username: brianmaierjr
+
+sass:
+    style: :compressed
 
 # Build settings
 markdown: kramdown

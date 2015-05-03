@@ -15,9 +15,9 @@ $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     30px;
+$spacing-unit:     30px; 
 
-$text-color:       #666;
+$text-color:       #666;  
 $background-color: #1e1f23;
 $brand-color:      #2a7ae2;
 
@@ -63,5 +63,6 @@ $on-laptop:        800px;
         "base",
         "fonts",
         "layout",
-        "syntax-highlighting"
+        "syntax-highlighting",
+        "navicon"
 ;
