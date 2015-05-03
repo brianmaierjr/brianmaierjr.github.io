@@ -190,9 +190,11 @@ nav {
 
         .center {
             width: 90%;
+            margin-top: 2em;
 
             @include media-query($on-palm) {
                 width: 70%;
+                margin-top: 0;
             }
         }
 

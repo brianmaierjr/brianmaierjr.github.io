@@ -23,6 +23,16 @@ module.exports = function(grunt) {
             }
           }
         },
+        imagemin: {
+          dynamic: {
+            files: [{
+              expand: true,
+              cwd: 'images/',
+              src: ['**/*.{png,jpg,gif,svg}'],
+              dest: 'images/'
+            }]
+          }
+        },
         sass: {
           global: {
             options: {
@@ -80,6 +90,12 @@ module.exports = function(grunt) {
 
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask("serve", ["shell:jekyllServe"]);
-    grunt.registerTask("default", ["sass", "autoprefixer", "criticalcss",  "concurrent:dev"]);
+    grunt.registerTask("default", ["shell:jekyllBuild", "concurrent:dev"]);
+    grunt.registerTask("production", ["sass", "uglify", "autoprefixer", "criticalcss", "imagemin"]);
+
+
+
+
+
+
 };
