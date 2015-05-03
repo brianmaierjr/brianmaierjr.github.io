@@ -9,7 +9,7 @@ $(document).ready(function() {
 	// Smart Underlines
 	SmartUnderline.init({
 	  location: ''
-	})
+	});
 
 	// Init Fastclick.js
 	FastClick.attach(document.body);
