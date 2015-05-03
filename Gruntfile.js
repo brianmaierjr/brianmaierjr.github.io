@@ -33,6 +33,10 @@ module.exports = function(grunt) {
            }
        },
         watch: {
+            options: {
+                // Start a live reload server on the default port 35729
+                livereload: true,
+            },
            styles: {
                files: ['style.css'],
                tasks: ['autoprefixer']
