@@ -8,14 +8,34 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         shell: {
-            jekyllServe: {
-                command: 'jekyll serve -w'
+          jekyllServe: {
+            command: "jekyll serve --baseurl="
+          },
+          jekyllBuild: {
+            command: "jekyll build --config _config-dev.yml"
+          }
+        },
+        uglify: {
+          global: {
+            files: {
+              "js/scripts.min.js": ["js/scripts.js"]
             }
+          }
+        },
+        sass: {
+          global: {
+            options: {
+              style: "compressed"
+            },
+            files: {
+              "css/main-unprefixed.css": "scss/main.scss"
+            }
+          }
         },
         autoprefixer: {
            dist: {
                files: {
-                   'build/style.css': 'style.css'
+                   'css/main.css': 'css/main-unprefixed.css'
                }
            }
        },
@@ -32,21 +52,28 @@ module.exports = function(grunt) {
                }
            }
        },
-        watch: {
-            options: {
-                // Start a live reload server on the default port 35729
-                livereload: true,
-            },
-           styles: {
-               files: ['style.css'],
-               tasks: ['autoprefixer']
-           }
-        }
+       watch: {
+         options: {
+           livereload: true
+         },
+         site: {
+           files: ["index.html", "_layouts/*.html", "_posts/*.md", "_projects/*.md", "_includes/*.html"],
+           tasks: ["shell:jekyllBuild"]
+         },
+         js: {
+           files: ["js/*.js"],
+           tasks: ["uglify", "shell:jekyllBuild"]
+         },
+         css: {
+           files: ["scss/*.scss"],
+           tasks: ["sass", "autoprefixer", "criticalcss", "shell:jekyllBuild"]
+         }
+       }
 
     });
 
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['criticalcss', 'shell']);
-
+    grunt.registerTask("serve", ["shell:jekyllServe"]);
+    grunt.registerTask("default", ["sass", "autoprefixer", "criticalcss", "shell:jekyllBuild", "watch"]);
 };
