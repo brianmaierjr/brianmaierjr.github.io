@@ -64,7 +64,7 @@ body {
 
 nav {
     position: fixed;
-    top: 1em;
+    top: 1em; 
     right: 1em;
     z-index: 9999;
     position: fixed;
@@ -189,7 +189,11 @@ nav {
         padding: 3em 0;
 
         .center {
-            width: 70%;
+            width: 90%;
+
+            @include media-query($on-palm) {
+                width: 70%;
+            }
         }
 
         h2 {
@@ -211,11 +215,8 @@ nav {
         }
 
         p {
-
-            @include media-query($on-palm) {
-                font-size: 1.4em;
-                line-height: 1.8;
-            }
+            font-size: 1.4em;
+            line-height: 1.8; 
         }
     }
 }
