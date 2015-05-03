@@ -9,8 +9,3 @@ $('nav').click(function() {
 	event.preventDefault();
 	$(this).toggleClass('active');
 });
-
-// Articles
-$('.articles').click(function() {
-	$('#articles').toggleClass('active');
-});
