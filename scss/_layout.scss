@@ -77,28 +77,6 @@ nav {
     height: 1.3em;
     @include transition(all .2s ease-in-out);
 
-    &.active {
-        height: auto;
-        width: 200px;
-
-        ul {
-            li {
-                opacity: 1;
-                -webkit-transform: translateY(0);
-                -ms-transform: translateY(0);
-                transform: translateY(0);
-                transition-delay: .2s;
-
-                @for $i from 1 through 4 {
-                    &:nth-child(#{$i}) {
-                        transition-delay: ($i / 10) + .2s;
-                    }
-                }
-
-            }
-        }
-    }
-
     #nav-toggle {
         position: absolute;
         top: 0;
@@ -107,6 +85,8 @@ nav {
 
     ul {
         margin: 0;
+        transform: translateY(3em);
+        @include transition(.2s all ease-in-out);
 
         li {
             list-style: none;
@@ -128,6 +108,30 @@ nav {
                     text-decoration: line-through;
                     color: $background-color;
                 }
+            }
+        }
+    }
+
+    &.active {
+        height: auto;
+        width: 200px;
+
+        ul {
+            transform: translateY(0);
+
+            li {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                transform: translateY(0); 
+                transition-delay: .2s;
+
+                @for $i from 1 through 4 {
+                    &:nth-child(#{$i}) {
+                        transition-delay: ($i / 10) + .2s;
+                    }
+                }
+
             }
         }
     }
