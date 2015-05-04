@@ -92,10 +92,8 @@ nav {
             list-style: none;
             margin-bottom: .5em;
             opacity: 0;
-            -webkit-transform: translateY(.5em);
-            -ms-transform: translateY(.5em);
             transform: translateY(.5em);
-            @include transition(.2s all ease-in-out);
+            @include transition(.2s all ease-in-out); 
 
             a {
                 color: $background-color;
@@ -115,14 +113,13 @@ nav {
     &.active {
         height: auto;
         width: 200px;
+        transition-delay: 0s;
 
         ul {
             transform: translateY(0);
 
             li {
                 opacity: 1;
-                -webkit-transform: translateY(0);
-                -ms-transform: translateY(0);
                 transform: translateY(0); 
                 transition-delay: .2s;
 
@@ -134,6 +131,12 @@ nav {
 
             }
         }
+    }
+
+    &.close {
+        width: 2em;
+        height: 1.3em;
+        transition-delay: .5s;
     }
 }
 
@@ -285,7 +288,7 @@ nav {
 
 .post-title {
     font-size: 42px;
-    letter-spacing: -1px;
+    letter-spacing: -1px; 
     line-height: 1;
 
     @include media-query($on-laptop) {
