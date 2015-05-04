@@ -230,10 +230,13 @@ nav {
 
         p {
             font-size: 1.4em;
-            line-height: 1.8;
+            line-height: 1.8; 
         }
 
-        @media screen and (min-width: 480px) and (max-width: 900px) and (orientation: landscape) {
+        @media screen 
+        and (min-width : 480px) 
+        and (max-width : 900px) 
+        and (max-height : 600px) {
             p {
                 font-size: 1em;
             }
@@ -290,7 +293,7 @@ nav {
     }
 }
 
-.post-content {
+.post-content { 
     margin-bottom: $spacing-unit; 
 
     h2 { 
