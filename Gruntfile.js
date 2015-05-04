@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 
     // load all grunt tasks matching the ['grunt-*', '@*/grunt-*'] patterns
         require('load-grunt-tasks')(grunt);
+        require('time-grunt')(grunt);
 
     // 1. All configuration goes here 
     grunt.initConfig({
@@ -73,13 +74,13 @@ module.exports = function(grunt) {
          },
          js: {
            files: ["js/*.js"],
-           tasks: ["uglify", "shell:jekyllBuild"]
+           tasks: ["uglify", "newer:shell:jekyllBuild"]
          },
          css: {
            files: ["scss/*.scss"],
-           tasks: ["sass", "autoprefixer", "criticalcss", "shell:jekyllBuild"]
+           tasks: ["sass", "autoprefixer", "newer:shell:jekyllBuild"]
          }
-       },
+       }, 
        concurrent: {
            dev: ['shell:jekyllServe', 'watch'],
            options: {
