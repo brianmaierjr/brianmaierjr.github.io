@@ -189,7 +189,11 @@ nav {
 
         .center {
             width: 90%;
-            margin-top: 2em;
+            margin: 0 auto;
+            transform: translate(0,0);
+            top: 3em;
+            left: 0;
+            position: relative;
 
             @include media-query($on-palm) {
                 width: 70%;
@@ -227,43 +231,6 @@ nav {
         }
     }
 }
-
-
-/**
- * ARTICLES
- */
-
- #articles {
-
-    .left-half,
-    .right-half {
-        @include transition(.2s all ease-in-out);
-    }
-
-    .left-half {
-        background: yellow;
-        -webkit-transform: translateX(-50vw);
-        -ms-transform: translateX(-50vw);
-        transform: translateX(-50vw);
-    }
-
-    .right-half {
-        background: $grey-color-light;
-        -webkit-transform: translateX(50vw);
-        -ms-transform: translateX(50vw);
-        transform: translateX(50vw);
-    }
-
-    &.active {
-        .left-half,
-        .right-half { 
-            -webkit-transform: translateX(0);
-            -ms-transform: translateX(0);
-            transform: translateX(0);
-        }
-    }
-
- }
 
 /**
  * Page content

@@ -21,10 +21,10 @@ dl, dd, ol, ul, figure {
 body {
     font-family: $base-font-family;
     font-size: $base-font-size;
-    line-height: $base-line-height;
+    line-height: $base-line-height; 
     font-weight: 300; 
     color: $text-color;
-    background-color: $background-color;
+    background-color: $text-color; 
     -webkit-text-size-adjust: 100%;
 }
 
