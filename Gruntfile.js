@@ -77,7 +77,7 @@ module.exports = function(grunt) {
          },
          css: {
            files: ["scss/*.scss"],
-           tasks: ["sass", "autoprefixer"]
+           tasks: ["sass", "autoprefixer", "criticalcss"]
          }
        },
        concurrent: {

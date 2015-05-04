@@ -184,20 +184,25 @@ nav {
     }
 
     .right-half {
-        background: $text-color;
+        background: $text-color; 
         color: white;
 
         .center {
             width: 90%;
             margin: 0 auto;
             transform: translate(0,0);
-            top: 3em;
+            top: 0;
             left: 0;
-            position: relative;
+            position: static;
+            padding: 5em 0 3em;
 
             @include media-query($on-palm) {
                 width: 70%;
                 margin-top: 0;
+                transform: translate(-50%,-50%);
+                position: absolute;
+                top: 50%;
+                left: 50%;
             }
         }
 
