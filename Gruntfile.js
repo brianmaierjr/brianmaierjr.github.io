@@ -54,7 +54,7 @@ module.exports = function(grunt) {
        criticalcss: {
            custom: {
                options: {
-                   url: "127.0.0.1:4000/portfolio-new/",
+                   url: "http://127.0.0.1:4000/",
                    width: 1200,
                    height: 900,
                    outputfile: "_includes/critical.css",
