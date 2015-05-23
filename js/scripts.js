@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// Nav Animation
-	$('.navicon-button').click(function() {
+	$('.navicon-button, nav ul a').click(function() {
 		$(this).toggleClass('open');
 		$('nav').toggleClass('active'); 
 	});
