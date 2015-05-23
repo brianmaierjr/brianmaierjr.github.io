@@ -73,7 +73,7 @@ module.exports = function(grunt) {
            tasks: ["shell:jekyllBuild"]
          },
          js: {
-           files: ["js/*.js"],
+           files: ["js/*.js", "!scripts.min.js", "!vendor.min.js"],
            tasks: ["uglify", "newer:shell:jekyllBuild"]
          },
          css: {
