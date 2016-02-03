@@ -118,26 +118,28 @@ nav {
                 font-family: $sans-serif;
                 padding: 0 .25em;
 
-                &:before {
-                    width: 0;
-                    transition: all .2s ease-in-out;
-                    content: "";
-                    display: block;
-                    height: 1px;
-                    position: absolute;
-                    top: 58%;
-                    left: 0;
-                    transform: translateY(-50%);
-                    background: $background-color;
-                }
-
-
-                &:hover {
-                    background: none;
-                    color: $background-color;
+                @include media-query($on-laptop) {
 
                     &:before {
-                        width: 100%;
+                        width: 0;
+                        transition: all .2s ease-in-out;
+                        content: "";
+                        display: block;
+                        height: 1px;
+                        position: absolute;
+                        top: 58%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        background: $background-color;
+                    }
+
+                    &:hover {
+                        background: none;
+                        color: $background-color;
+
+                        &:before {
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -226,22 +228,28 @@ nav {
                 text-decoration: none;
                 padding: 0 .25em;
 
-                &:before {
-                    width: 0;
-                    transition: all .2s ease-in-out;
-                    content: "";
-                    display: block;
-                    height: 1px;
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    background: yellow;
+                @include media-query($on-laptop) {
+
+                    &:before {
+                        width: 0;
+                        transition: all .2s ease-in-out;
+                        content: "";
+                        display: block;
+                        height: 1px;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: yellow;
+                    }
                 }
             }
 
-            &:hover {
-                a:before {
-                    width: 100%;
+            @include media-query($on-laptop) {
+
+                &:hover {
+                    a:before {
+                        width: 100%;
+                    }
                 }
             }
         }

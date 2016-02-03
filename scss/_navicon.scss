@@ -31,7 +31,7 @@ $content-bg : #E7E6DD;
     transition: $duration;
     opacity: 1;
 
-    .8avicon:before, .navicon:after {
+    .navicon:before, .navicon:after {
       transition: $duration/2;
     }
 
