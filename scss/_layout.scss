@@ -116,11 +116,29 @@ nav {
                 color: $yellow;
                 text-decoration: none;
                 font-family: $sans-serif;
+                padding: 0 .25em;
+
+                &:before {
+                    width: 0;
+                    transition: all .2s ease-in-out;
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    position: absolute;
+                    top: 58%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    background: $background-color;
+                }
+
 
                 &:hover {
                     background: none;
-                    text-decoration: line-through;
                     color: $background-color;
+
+                    &:before {
+                        width: 100%;
+                    }
                 }
             }
         }
