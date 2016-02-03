@@ -2,18 +2,18 @@
 @import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Montserrat);
 
 // Our variables
-$base-font-family: 'Lora', Georgia, serif;
-$heading-font-family: 'salomeregular', cursive;
+$serif:            'Lora', Georgia, serif;
+$heading:           'salomeregular', cursive;
 $sans-serif:	   'Montserrat', sans-serif;
-$base-font-size:   16px;
+$base-font-size:   22px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     30px;
+$spacing-unit:     2em;
 
 $text-color:       #666;  
-$background-color: #1e1f23;
-$brand-color:      #2a7ae2;
+$background-color: #373C35;
+$yellow:           darken(yellow, 20%);
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -24,8 +24,6 @@ $content-width:    800px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
-
-
 
 // Using media queries with like this:
 // @include media-query($on-palm) {
@@ -40,22 +38,13 @@ $on-laptop:        800px;
     }
 }
 
-// Transition Mixin
-// @include transition(all .2s ease-in-out);
-@mixin transition($transition...) {
-  // defining prefixes so we can use them in mixins below
-  $prefixes:      ("-webkit-", "" );
-  @each $prefix in $prefixes {
-    #{$prefix}transition: $transition;
-  }
-}
-
-
-// Imports
 @import
         "base",
         "fonts",
         "layout",
+        "articles",
+        "posts",
+        "work",
         "syntax-highlighting",
         "navicon"
 ;

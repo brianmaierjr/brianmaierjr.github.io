@@ -4,13 +4,13 @@ module.exports = function(grunt) {
         require('load-grunt-tasks')(grunt);
         require('time-grunt')(grunt);
 
-    // 1. All configuration goes here 
+    // 1. All configuration goes here
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
         shell: {
           jekyllServe: {
-            command: "jekyll serve --baseurl="
+            command: "jekyll serve --config _config-dev.yml"
           },
           jekyllBuild: {
             command: "jekyll build --config _config-dev.yml"
@@ -69,18 +69,18 @@ module.exports = function(grunt) {
            livereload: true
          },
          site: {
-           files: ["index.html", "_layouts/*.html", "_posts/*.md", "_projects/*.md", "_includes/*.html"],
+           files: ["*.html", "_layouts/*.html", "_posts/*.md", "_projects/*.md", "_includes/*.html"],
            tasks: ["shell:jekyllBuild"]
          },
          js: {
-           files: ["js/*.js", "!scripts.min.js", "!vendor.min.js"],
-           tasks: ["uglify", "newer:shell:jekyllBuild"]
+           files: ["js/*.js", "!js/scripts.min.js", "!js/vendor.min.js"],
+           tasks: ["uglify", "shell:jekyllBuild"]
          },
          css: {
            files: ["scss/*.scss"],
-           tasks: ["sass", "autoprefixer", "newer:shell:jekyllBuild"]
+           tasks: ["sass", "autoprefixer", "shell:jekyllBuild"]
          }
-       }, 
+       },
        concurrent: {
            dev: ['shell:jekyllServe', 'watch'],
            options: {

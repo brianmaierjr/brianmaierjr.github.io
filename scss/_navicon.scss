@@ -11,13 +11,17 @@ $content-bg : #E7E6DD;
 .navicon-button {
   display: inline-block;
   position: relative;
-  padding: 1.5rem .75rem;
+  padding: 1.25rem .5rem;
   transition: $duration/2;
   cursor: pointer;
   user-select: none;
   opacity: .8;
   background: transparent;
   z-index: 9999;
+
+  @include media-query($on-palm) {
+      padding: 1.5rem .75rem;
+  }
 
   .navicon:before, .navicon:after {
     transition: $duration/2;
@@ -38,7 +42,7 @@ $content-bg : #E7E6DD;
 
 .navicon {
   position: relative;
-  width: 2.5em;
+  width: 2.5rem;
   height: .3125rem;
   background: $background-color;
   transition: $duration;

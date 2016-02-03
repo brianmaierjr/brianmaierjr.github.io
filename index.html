@@ -1,23 +1,34 @@
 ---
-layout: default
+layout: home 
 ---
 
 <div class="home">
 
-  <div class="intro">
     <div class="left-half">
       <div class="center">
         <h1>Brian Maier Junior</h1>
-        <p><em>💩 Keep it classy Internet Explorer. 💩</em></p>
+            <ul class="social">
+            <li><a href="https://github.com/brianmaierjr" target="_blank">GitHub</a></li>
+            <li><a href="https://dribbble.com/brianmaierjr" target="_blank">Dribbble</a></li>
+            <li><a href="https://twitter.com/brianmaierjr" target="_blank">Twitter</a></li>
+        </ul>
       </div>
     </div>
 
     <div class="right-half">
-      <div class="center">
-        <h2>Hello</h2>
-        <p>I'm a Senior Front End Web Designer at <a href="http://www.learninghouse.com" target="_blank">The Learning House</a> in Louisville, Kentucky. This site is currently being redesigned. In the meantime check out one of my side projects: <a href="http://147colors.com" target="_blank">147Colors</a> or <a href="http://brianmaierjr.com/long-haul" target="_blank">Long Haul Jekyll Theme</a>.</p>
-      </div>  
+       <div id="intro">
+          <div class="center">
+            <h2>Oh, hey there!</h2>
+            <p>I'm a Designer & Developer currently living in Louisville, Kentucky and working at <a href="http://www.learninghouse.com" target="_blank">The Learning House</a>. Learn more <a class="aboutTrigger" href="#about">about me</a> or check out some of <a href="/work">my work</a>. Occassionaly I will <a href="/articles">write about design & development</a> and other times I post <a href="http://dribbble.com/brianmaierjr" target="_blank">what I am working on.</a></p>
+          </div>  
+      </div>
+      <div id="about">
+          <a class="aboutTrigger" href="#">&times; Close</a>
+          <div class="center">
+              <h2>About Me</h2>
+              {% include about.html %}
+          </div>
+      </div>
     </div>
-  </div><!-- end .intro -->
 
 </div>

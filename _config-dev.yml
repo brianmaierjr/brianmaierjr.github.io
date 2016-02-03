@@ -1,9 +1,10 @@
 # Site settings
 title: Brian Maier Jr.
 email: brimaidesigns@gmail.com
-description: Another butcher in the meatmarket
+description: Another butcher in the meat market
 baseurl: ""
 url: ""
+permalinks: pretty
 
 # Build settings
 markdown: kramdown

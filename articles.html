@@ -1,0 +1,32 @@
+---
+layout: home 
+---
+
+<div class="articles">
+
+    <div class="left-half">
+      <div class="center">
+          <h1>Articles</h1>
+      </div>
+    </div>
+
+    <div class="right-half">
+      <div class="post-list">
+            {% for post in site.posts %}
+              <article>
+                    <h2 class="title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+                    {{ post.excerpt }}
+              </article>
+            {% endfor %}
+      </div>  
+      <div id="about">
+          <a class="aboutTrigger" href="#">&times; Close</a>
+          <div class="center">
+              <h2>About Me</h2>
+              {% include about.html %}
+        </div>
+      </div>
+
+    </div>
+
+</div>

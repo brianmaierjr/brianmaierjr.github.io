@@ -1,0 +1,53 @@
+.articles {
+
+    .left-half {
+        background: darken($background-color, 10%);
+        background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(../images/articles.jpg) no-repeat center darken($background-color, 10%); 
+        background-size: 100% 100%, cover;
+
+        h1 {
+            font-size: 18vw;
+
+            @include media-query($on-palm) {
+                font-size: 9vw;
+            }
+        }
+    }
+
+    .right-half {
+        overflow-y: scroll;
+    }
+
+    .post-list {
+        width: 90%;
+        margin: 0 auto;
+        padding: 2em 0;
+
+        @include media-query($on-palm) {
+            width: 70%;
+            padding: 4em 0;
+        }
+
+        .title {
+            margin-bottom: .25em;
+        }
+    }
+
+    article {
+        
+        h2 {
+            &:before {
+                display: none;
+            }
+
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    color: lighten($yellow, 20%);
+                }
+            }
+        }
+    }
+
+}

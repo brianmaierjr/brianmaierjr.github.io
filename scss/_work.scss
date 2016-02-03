@@ -1,0 +1,8 @@
+.work {
+
+    .left-half {
+        background: darken($background-color, 10%);
+        background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(../images/work.jpg) no-repeat center darken($background-color, 10%); 
+        background-size: 100% 100%, cover;
+    }
+}

@@ -2,13 +2,22 @@
  * General Styles
  */
 
+
 html,
 body {
     height: 100%;
     width: 100%;
 }
 
-.center {
+a {
+    color: $yellow;
+
+    &:hover {
+        color: lighten($yellow, 20%);
+    }
+}
+
+%center {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -16,10 +25,15 @@ body {
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     width: 90%;
+    max-width: 675px;
 
     @include media-query($on-palm) {
-        width: auto;
+        width: 70%;
     } 
+}
+
+.center {
+    @extend %center;
 }
 
 .left-half,
@@ -36,6 +50,9 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
+    background: darken($background-color, 10%);
+    background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(../images/left-bg.jpg) no-repeat center darken($background-color, 10%); 
+    background-size: 100% 100%, cover;
 
     @include media-query($on-palm) {
         width: 50vw;
@@ -47,7 +64,7 @@ body {
     bottom: 0;
     right: 0;
     width: 100%;
-    height: 50vh;
+    height: auto;
 
     @include media-query($on-palm) {
         width: 50vw;
@@ -65,17 +82,17 @@ body {
 nav {
     position: fixed;
     top: 1em; 
-    right: 1em;
+    left: 1em;
     z-index: 9999;
     position: fixed;
     top: 1em;
     right: 1em;
     z-index: 9999;
-    width: 2em;
+    width: 1em;
     background: white;
     padding: 1em;
-    height: 1.3em;
-    @include transition(all .2s ease-in-out);
+    height: .5em;
+    transition: .2s all ease-in-out;
 
     #nav-toggle {
         position: absolute;
@@ -86,20 +103,19 @@ nav {
     ul {
         margin: 0;
         transform: translateY(3em);
-        @include transition(.2s all ease-in-out);
+        transition: .2s all ease-in-out;
 
         li {
             list-style: none;
             margin-bottom: .5em;
             opacity: 0;
             transform: translateY(.5em);
-            @include transition(.2s all ease-in-out); 
+            transition: .2s all ease-in-out; 
 
             a {
-                color: $background-color;
+                color: $yellow;
                 text-decoration: none;
                 font-family: $sans-serif;
-                background: yellow;
 
                 &:hover {
                     background: none;
@@ -141,109 +157,208 @@ nav {
 }
 
 /**
- * Intro Section
+ * Home Page
  */
-.intro {
 
+.left-half {
 
-    .left-half {
-        background-image: url('../images/left-bg.svg');
-        background-size: auto 90%;
-        background-position: center;
-        background-color: #efefef;
-        background-repeat: no-repeat;
+    h1 {
+        font-size: 23vw;
+        line-height: 1;
+        color: white;
+        margin-bottom: .2em;
 
-        h1 {
-            font-size: 23vw;
-            line-height: 1;
-            color: $text-color;
-
-            @include media-query($on-palm) {
-                font-size: 9vw;
-            }
+        @include media-query($on-palm) {
+            font-size: 9vw;
         }
+    }
 
-        nav {
-            ul {
-                text-align: center;
+    nav {
+        ul {
+            text-align: center;
 
-                li {
-                    display: inline;
-                    list-style: none;
+            li {
+                display: inline;
+                list-style: none;
 
+                a {
+                    padding: 0 .5em;
+                    color: darken($yellow, 20%);
+                }
+
+                &:hover {
                     a {
-                        padding: 0 .5em;
-                        color: darken(yellow, 20%);
-                    }
-
-                    &:hover {
-                        a {
-                            text-decoration: none;
-                        }
+                        text-decoration: none;
                     }
                 }
             }
         }
+    }
 
-        .center {
-            text-align: center;
+    .social {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            position: relative;
+
+            a {
+                text-decoration: none;
+                padding: 0 .25em;
+
+                &:before {
+                    width: 0;
+                    transition: all .2s ease-in-out;
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: yellow;
+                }
+            }
+
+            &:hover {
+                a:before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .center {
+        text-align: center;
+    }
+}
+
+.right-half {
+    background: $background-color; 
+    color: white;
+
+    .center {
+        width: 90%;
+        margin: 0 auto;
+        transform: translate(0,0);
+        top: 0;
+        left: 0;
+        position: static;
+        padding: 5em 0 3em;
+
+        @include media-query($on-palm) {
+            width: 70%;
+            margin-top: 0;
+            transform: translate(-50%,-50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
         }
     }
 
-    .right-half {
-        background: $text-color; 
-        color: white;
+    h2 {
+        font-family: $sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: darken(white, 45%);
+        position: relative;
 
-        .center {
-            width: 90%;
-            margin: 0 auto;
-            transform: translate(0,0);
-            top: 0;
+        &:before {
+            content: "";
+            position: absolute;
+            top: -1em;
             left: 0;
-            position: static;
-            padding: 5em 0 3em;
-
-            @include media-query($on-palm) {
-                width: 70%;
-                margin-top: 0;
-                transform: translate(-50%,-50%);
-                position: absolute;
-                top: 50%;
-                left: 50%;
-            }
+            width: 2em;
+            height: 4px;
+            background: darken(white, 45%);
         }
+    }
 
-        h2 {
-            font-family: $sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            color: darken(white, 45%);
-            position: relative;
+    p {
+        line-height: 1.8; 
+    }
 
-            &:before {
-                content: "";
-                position: absolute;
-                top: -1em;
-                left: 0;
-                width: 2em;
-                height: 4px;
-                background: darken(white, 45%);
-            }
-        }
-
+    @media screen 
+    and (min-width : 480px) 
+    and (max-width : 900px) 
+    and (max-height : 600px) {
         p {
-            font-size: 1.4em;
-            line-height: 1.8; 
+            font-size: 1em;
+        }
+    }
+}
+
+
+/**
+ * About Section
+**/
+
+#about {
+    background-color: #efefef;
+    background-color: #efefef;
+    background: darken($background-color, 10%); 
+    color: white;
+    height: 100vh;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: .5s all ease-in-out;
+    min-width: 50vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    line-height: 1.8;
+    overflow-y: scroll;
+
+    /*
+    .center {
+        top: 0;
+        left: 0;
+        transform: none;
+        padding: 5em 0 2em;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+    } */
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    h2 {
+        color: $yellow;
+        font-family: $sans-serif;
+        text-transform: uppercase;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: -1em;
+            left: 0;
+            width: 2em;
+            height: 4px;
+            background: #8c8c8c; 
+            visibility: hidden;
+            
+                 @include media-query($on-palm) {
+                    visibility: visible;
+                }
         }
 
-        @media screen 
-        and (min-width : 480px) 
-        and (max-width : 900px) 
-        and (max-height : 600px) {
-            p {
-                font-size: 1em;
-            }
-        }
+    }
+
+    .aboutTrigger {
+        z-index: 99;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        text-decoration: none;
+        font-family: $sans-serif;
+        text-transform: uppercase;
+        background: #efefef;
+        color: $text-color;
+        padding: .2em .5em;
     }
 }
 
@@ -269,7 +384,10 @@ nav {
 
 .post-meta {
     font-size: $small-font-size;
-    color: $grey-color;
+    color: white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: .2em 0;
 }
 
 .post-link {
