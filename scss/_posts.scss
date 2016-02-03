@@ -83,22 +83,25 @@
     padding: 0 .25em;
     font-size: .75em;
 
-    &:before {
-        width: 0;
-        transition: all .2s ease-in-out;
-        content: "";
-        display: block;
-        height: 1px;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        background: yellow;
-    }
+    @include media-query($on-laptop) {
+            
+        &:before {
+            width: 0;
+            transition: all .2s ease-in-out;
+            content: "";
+            display: block;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: yellow;
+        }
 
 
-    &:hover:before {
-        width: 100%;
+        &:hover:before {
+            width: 100%;
+        }
     }
 }
 
