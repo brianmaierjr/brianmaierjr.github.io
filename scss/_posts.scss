@@ -1,11 +1,13 @@
 #post {
+    position: absolute;
+    top: 0;
 
     .left-half {
         h1 {
             font-size: 14vw;
             line-height: 1.2;
 
-            @include media-query($on-palm) {
+            @include media-query($on-laptop) {
                 font-size: 7vw;
             }
         }
@@ -21,7 +23,7 @@
                 font-family: $sans-serif;
                 margin-bottom: .5em;
 
-                @include media-query($on-palm) {
+                @include media-query($on-laptop) {
                     font-size: 2em;
                 }
              }
@@ -39,7 +41,7 @@
    width: 90%;
    margin: 2em auto;
 
-        @include media-query($on-palm) {
+        @include media-query($on-laptop) {
             width: 70%;
             margin: 4em auto;
         }

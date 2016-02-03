@@ -23,7 +23,7 @@
         margin: 0 auto;
         padding: 2em 0;
 
-        @include media-query($on-palm) {
+        @include media-query($on-laptop) {
             width: 70%;
             padding: 4em 0;
         }

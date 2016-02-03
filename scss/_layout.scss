@@ -27,7 +27,7 @@ a {
     width: 90%;
     max-width: 675px;
 
-    @include media-query($on-palm) {
+    @include media-query($on-laptop) {
         width: 70%;
     } 
 }
@@ -41,7 +41,7 @@ a {
     position: relative;
     top: 0;
 
-    @include media-query($on-palm) {
+    @include media-query($on-laptop) {
         position: fixed;
     }
 }
@@ -54,7 +54,7 @@ a {
     background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(../images/left-bg.jpg) no-repeat center darken($background-color, 10%); 
     background-size: 100% 100%, cover;
 
-    @include media-query($on-palm) {
+    @include media-query($on-laptop) {
         width: 50vw;
     }
 }
@@ -66,7 +66,7 @@ a {
     width: 100%;
     height: auto;
 
-    @include media-query($on-palm) {
+    @include media-query($on-laptop) {
         width: 50vw;
         height: 100vh;
         top: 0;
@@ -168,7 +168,7 @@ nav {
         color: white;
         margin-bottom: .2em;
 
-        @include media-query($on-palm) {
+        @include media-query($on-laptop) {
             font-size: 9vw;
         }
     }
@@ -246,7 +246,7 @@ nav {
         position: static;
         padding: 5em 0 3em;
 
-        @include media-query($on-palm) {
+        @include media-query($on-laptop) {
             width: 70%;
             margin-top: 0;
             transform: translate(-50%,-50%);
@@ -341,7 +341,7 @@ nav {
             background: #8c8c8c; 
             visibility: hidden;
             
-                 @include media-query($on-palm) {
+                 @include media-query($on-laptop) {
                     visibility: visible;
                 }
         }
