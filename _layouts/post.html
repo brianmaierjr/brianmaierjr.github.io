@@ -4,7 +4,7 @@ layout: default
 `
 <div id="post">
 
-    <div class="left-half" {% if page.image %} style="background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(/images/{{ page.image }}); background-size: 100% 100%, cover;"{% endif %}>
+    <div class="left-half animsition item" {% if page.image %} style="background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(/images/{{ page.image }}); background-size: 100% 100%, cover;"{% endif %}>
       <div class="center">
             <a class="backLink animsition-link" href="/articles">&larr; back to Articles</a>
             <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
