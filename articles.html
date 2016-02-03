@@ -14,7 +14,7 @@ layout: home
       <div class="post-list">
             {% for post in site.posts %}
               <article>
-                    <h2 class="title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+                    <h2 class="title"><a href="{{ post.url | prepend: site.baseurl }}" class="animsition-link">{{ post.title }}</a></h2>
                     {{ post.excerpt }}
               </article>
             {% endfor %}

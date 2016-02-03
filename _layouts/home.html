@@ -5,22 +5,26 @@
 
   <body>
 
-	<nav>
-	  	<a class="navicon-button x"  id="nav-toggle">
-	      <div class="navicon"></div>
-	    </a>
+    <div class="animsition">
 
-	    <ul>
-            <li><a href="/">Home</a></li>
-            <li><a class="aboutTrigger" href="#">About</a></li>
-            <li><a href="/work">Work</a></li>
-            <li><a href="/articles">Articles</a></li>
-            <li><a href="mailto:brianmaierjr@gmail.com?subject=Hey dude. Let's make magic together.">Contact</a></li>
-	    </ul>
-	</nav>
+        <nav>
+            <a class="navicon-button x"  id="nav-toggle">
+              <div class="navicon"></div>
+            </a>
 
-    <div id="content">
-        {{ content }}
+            <ul>
+                <li><a class="animsition-link" href="/">Home</a></li>
+                <li><a class="aboutTrigger" href="#">About</a></li>
+                <li><a class="animsition-link" href="/work">Work</a></li>
+                <li><a class="animsition-link" href="/articles">Articles</a></li>
+                <li><a href="mailto:brianmaierjr@gmail.com?subject=Hey dude. Let's make magic together.">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            {{ content }}
+        </div>
+
     </div>
 
   </body>

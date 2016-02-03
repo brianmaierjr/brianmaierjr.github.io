@@ -6,7 +6,7 @@ layout: default
 
     <div class="left-half" {% if page.image %} style="background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(/images/{{ page.image }}); background-size: 100% 100%, cover;"{% endif %}>
       <div class="center">
-            <a class="backLink" href="/articles">&larr; back to Articles</a>
+            <a class="backLink animsition-link" href="/articles">&larr; back to Articles</a>
             <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
             <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
             <ul class="share">
