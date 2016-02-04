@@ -191,6 +191,10 @@ nav {
         @include media-query($on-laptop) {
             font-size: 9vw;
         }
+
+        @media (max-width: 800px) and (orientation: landscape) {
+            font-size: 8vw;
+        }
     }
 
     nav {
@@ -320,74 +324,14 @@ nav {
  * About Section
 **/
 
-#about {
-    background-color: #efefef;
-    background-color: #efefef;
-    background: darken($background-color, 10%); 
-    color: white;
-    height: 100vh;
-    transform: translateX(100%);
-    opacity: 0;
-    transition: .5s all ease-in-out;
-    min-width: 50vw;
-    position: fixed;
-    top: 0;
-    right: 0;
-    line-height: 1.8;
-    overflow-y: scroll;
-
-    /*
-    .center {
-        top: 0;
-        left: 0;
-        transform: none;
-        padding: 5em 0 2em;
-        margin: 0 auto;
-        display: block;
-        position: relative;
-    } */
-
-    &.active {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(0);
-    }
-
-    h2 {
-        color: $yellow;
-        font-family: $sans-serif;
-        text-transform: uppercase;
-
-        &:before {
-            content: "";
-            position: absolute;
-            top: -1em;
-            left: 0;
-            width: 2em;
-            height: 4px;
-            background: #8c8c8c; 
-            visibility: hidden;
-            
-                 @include media-query($on-laptop) {
-                    visibility: visible;
-                }
-        }
-
-    }
-
-    .aboutTrigger {
-        z-index: 99;
-        position: absolute;
-        top: 1em;
-        right: 1em;
-        text-decoration: none;
-        font-family: $sans-serif;
-        text-transform: uppercase;
-        background: #efefef;
-        color: $text-color;
-        padding: .2em .5em;
+.about {
+    .left-half {
+        background: darken($background-color, 10%);
+        background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(../images/me.jpg) no-repeat center darken($background-color, 10%); 
+        background-size: 100% 100%, cover;
     }
 }
+
 
 /**
  * Page content

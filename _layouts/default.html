@@ -4,23 +4,27 @@
   {% include head.html %}
 
   <body>
+      
+    <div class="animsition">
 
-	<nav>
-	  	<a class="navicon-button x"  id="nav-toggle">
-	      <div class="navicon"></div>
-	    </a>
+        <nav>
+            <a class="navicon-button x"  id="nav-toggle">
+              <div class="navicon"></div>
+            </a>
 
-	    <ul>
-            <li><a href="/">Home</a></li>
-            <li><a class="aboutTrigger" href="#">About</a></li>
-            <li><a href="/work">Work</a></li>
-            <li><a href="/articles">Articles</a></li>
-	    	<li><a href="mailto:brianmaierjr@gmail.com?subject=Hey dude. Let's make magic together.">Contact</a></li>
-	    </ul>
-	</nav>
+            <ul>
+                <li><a class="animsition-link" href="/">Home</a></li>
+                <li><a class="animsition-link" href="/about">About</a></li>
+                <li><a class="animsition-link" href="/work">Work</a></li>
+                <li><a class="animsition-link" href="/articles">Articles</a></li>
+                <li><a href="mailto:brianmaierjr@gmail.com?subject=Hey dude. Let's make magic together.">Contact</a></li>
+            </ul>
+        </nav>
 
-    <div id="content">
-        {{ content }}
+        <div id="content">
+            {{ content }}
+        </div>
+
     </div>
 
   </body>

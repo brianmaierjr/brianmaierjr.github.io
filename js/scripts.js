@@ -18,12 +18,6 @@ $(document).ready(function() {
         }, false);
     };
 
-    // About Section
-    $('.aboutTrigger').click(function(e) {
-        e.preventDefault();
-        $('#about').toggleClass('active');
-    });
-
     $(".animsition").animsition({
         inClass: 'fade-in',
         outClass: 'fade-out',
