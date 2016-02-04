@@ -48,7 +48,7 @@ a {
 
 .left-half {        
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: darken($background-color, 10%);
     background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(../images/left-bg.jpg) no-repeat center darken($background-color, 10%); 
@@ -63,7 +63,7 @@ a {
     top: inherit;
     bottom: 0;
     right: 0;
-    width: 100%;
+    width: 100vw;
     height: auto;
 
     @include media-query($on-laptop) {
