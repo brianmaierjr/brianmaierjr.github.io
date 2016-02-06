@@ -33,11 +33,10 @@ title: home
         <p class="shoutOut">If you have a project you'd like to collaborate on feel free to email <a href="mailto:brianmaierjr@gmail.com?subject=Hey dude. Let's make magic together.">brianmaierjr@gmail.com</a>.</p>
         <h3>Recent Articles</h3>
         <div class="recent-articles">
-            {% for post in site.posts limit:2 %}
+            {% for post in site.posts limit:4 %}
               <article>
+                    <p class="date">{{ post.date | date: '%B %d, %Y' }}</p>
                     <h4 class="title"><a href="{{ post.url | prepend: site.baseurl }}" class="animsition-link">{{ post.title }}</a></h4>
-                    <p>{{ post.date | date: '%B %d, %Y' }}</p>
-                    <p>{{ post.export }}</p>
               </article>
             {% endfor %}
         </div>

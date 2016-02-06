@@ -93,7 +93,7 @@
  */
 
 .share {
-    margin: 0;
+    margin: 4em 0 0 0;
     font-family: $sans-serif;
     font-size: .8em;
     text-align: center;
@@ -133,9 +133,8 @@
     padding: .25em;
     font-size: .75em;
     background: lighten($yellow, 20%);
+    transition: .2s all ease-in-out;
     
-
-
     @include media-query($on-laptop) {
             
         &:before {
@@ -145,14 +144,14 @@
             display: block;
             height: 3px;
             position: absolute;
-            top: 50%;
+            top: 100%; 
             right: 0;
-            transform: translateY(-50%);
             background: $background-color;
         }
 
         &:hover {
-            color: $background-color;
+            color: white;
+            background: darken($yellow, 20%);
 
             &:before {
                 width: 100%;
