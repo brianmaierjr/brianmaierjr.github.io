@@ -71,19 +71,27 @@ module.exports = function(grunt) {
                }
            }
        },
-       criticalcss: {
-           custom: {
-               options: {
-                   url: "http://127.0.0.1:4000/",
-                   width: 1200,
-                   height: 900,
-                   outputfile: "_includes/critical.css",
-                   filename: "_site/css/main.css", // Using path.resolve( path.join( ... ) ) is a good idea here
-                   buffer: 800*1024,
-                   ignoreConsole: false
-               }
-           }
-       },
+        critical: {
+            dist: {
+                options: {
+                  base: './',
+                  dimensions: [{
+                    width: 1300,
+                    height: 900
+                   },
+                   {
+                    width: 500,
+                    height: 900
+                  }]
+                },
+                files: [
+                  {src: ['_site/index.html'], dest: '_includes/critical-home.css'},
+                  {src: ['_site/about.html'], dest: '_includes/critical-about.css'},
+                  {src: ['_site/work.html'], dest: '_includes/critical-work.css'},
+                  {src: ['_site/articles.html'], dest: '_includes/critical-articles.css'},
+                ]
+            }
+        },
        watch: {
          site: {
            files: ["*.html", "_layouts/*.html", "_posts/*.md", "_projects/*.md", "_includes/*.html"],
