@@ -4,7 +4,7 @@ name: "The portfolio of Brian Maier Jr."
 email: brimaidesigns@gmail.com
 description: Another butcher in the meat market
 baseurl: ""
-baseurl: "http://brianmaierjr.com"
+url: "http://brianmaierjr.com"
 icon:           /favicon/apple-touch-icon-180x180.png 
 author:
   facebook:     brianmierjr
