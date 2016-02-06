@@ -8,14 +8,34 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        shell: {
-          jekyllServe: {
-            command: "jekyll serve --config _config-dev.yml"
-          },
-          jekyllBuild: {
-            command: "jekyll build --config _config-dev.yml"
-          }
+        jekyll: {
+            serve: {
+               options: {
+                    serve: true,
+                    dest: '_site',
+                    config: '_config-dev.yml'
+                }
+            },
+            build: {
+                options: {
+                    dest: '_site',
+                    config: '_config-dev.yml'
+                }
+            },
+            production: {
+                options: {
+                    dest: '_site',
+                }
+            }
         },
+
+        browserSync: {
+            files: {
+                src: ['_site/css/*.css', '_site/*.html']
+            },
+            proxy: 'localhost:4000'
+        },
+
         uglify: {
           global: {
             files: {
@@ -65,24 +85,21 @@ module.exports = function(grunt) {
            }
        },
        watch: {
-         options: {
-           livereload: true
-         },
          site: {
            files: ["*.html", "_layouts/*.html", "_posts/*.md", "_projects/*.md", "_includes/*.html"],
-           tasks: ["shell:jekyllBuild"]
+           tasks: ["jekyll:build"]
          },
          js: {
            files: ["js/*.js", "!js/scripts.min.js", "!js/vendor.min.js"],
-           tasks: ["uglify", "shell:jekyllBuild"]
+           tasks: ["uglify"]
          },
          css: {
            files: ["scss/*.scss"],
-           tasks: ["sass", "autoprefixer", "shell:jekyllBuild"]
+           tasks: ["sass", "autoprefixer"]
          }
        },
        concurrent: {
-           dev: ['shell:jekyllServe', 'watch'],
+           dev: ['jekyll:serve', 'browserSync', 'watch'],
            options: {
                logConcurrentOutput: true
            }
@@ -91,12 +108,6 @@ module.exports = function(grunt) {
 
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask("default", ["shell:jekyllBuild", "concurrent:dev"]);
-    grunt.registerTask("production", ["sass", "uglify", "autoprefixer", "criticalcss", "imagemin", "shell:jekyllBuild"]);
-
-
-
-
-
+    grunt.registerTask("default", ["concurrent:dev"]);
 
 };

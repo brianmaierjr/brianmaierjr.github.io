@@ -5,13 +5,12 @@
 $serif:            'Lora', Georgia, serif;
 $heading:           'salomeregular', cursive;
 $sans-serif:	   'Montserrat', sans-serif;
-$base-font-size:   22px;
-$small-font-size:  $base-font-size * 0.875;
+$condensed:         'antoniobold', impact, sans-serif;
+$base-font-size:   20px;
 $base-line-height: 1.5;
 
-$spacing-unit:     2em;
+$spacing-unit:     2rem;
 
-$text-color:       #666;  
 $background-color: #373C35;
 $yellow:           darken(yellow, 20%);
 
@@ -25,13 +24,6 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
 @mixin media-query($device) {
     @media screen and (min-width: $device) {
         @content;
@@ -40,12 +32,13 @@ $on-laptop:        800px;
 
 @import
         "base",
+        "typography",
+        "nav",
         "animsition",
-        "fonts",
         "layout",
+        "about",
         "articles",
         "posts",
         "work",
-        "syntax-highlighting",
-        "navicon"
+        "syntax-highlighting"
 ;

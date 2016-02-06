@@ -1,6 +1,7 @@
 ---
 layout: post
 Title: "Another Year"
+image: new-year.jpg
 ---
 
 Once again it's another year and with it another new site.

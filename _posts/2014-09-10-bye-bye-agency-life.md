@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Bye Bye Agency Life
-class: post
-color: cadetblue
+image: bye-bye.jpg
 ---
 
 A couple months ago I switched from designing at an Interactive agency to working for higher education focused organization not knowing what was going to happen. I'm here today saying I'm glad I took the leap.

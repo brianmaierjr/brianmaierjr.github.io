@@ -1,5 +1,5 @@
-/**
- * General Styles
+/* 
+* General Styles
  */
 
 
@@ -7,183 +7,57 @@ html,
 body {
     height: 100%;
     width: 100%;
-}
+    font-size: $base-font-size; 
 
-a {
-    color: $yellow;
-
-    &:hover {
-        color: lighten($yellow, 20%);
+    @include media-query($on-laptop) {
+        font-size: 22px;
     }
 }
 
-%center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-    width: 90%;
-    max-width: 675px;
+/**
+ * Main Layout 
+ */
+
+.home,
+.about,
+.articles,
+.work,
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: center;
+    justify-content: center;
 
     @include media-query($on-laptop) {
-        width: 70%;
-    } 
-}
+        flex-direction: row;
+        height: 100vh;
+    }
 
-.center {
-    @extend %center;
 }
 
 .left-half,
 .right-half {
-    position: relative;
-    top: 0;
-
-    @include media-query($on-laptop) {
-        position: fixed;
-    }
+    flex: 1;
 }
 
 .left-half {        
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    position: relative;
+    min-height: 100vh;
     background: darken($background-color, 10%);
     background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(../images/left-bg.jpg) no-repeat center darken($background-color, 10%); 
     background-size: 100% 100%, cover;
 
-    @include media-query($on-laptop) {
-        width: 50vw;
-    }
-}
-
-.right-half {
-    top: inherit;
-    bottom: 0;
-    right: 0;
-    width: 100vw;
-    height: auto;
-
-    @include media-query($on-laptop) {
-        width: 50vw;
+    .content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         height: 100vh;
-        top: 0;
-        bottom: inherit; 
-        padding: 0; 
     }
-}
-
-/**
- * Main Navigation
- */
-
-nav {
-    position: fixed;
-    top: 1em; 
-    left: 1em;
-    z-index: 9999;
-    position: fixed;
-    top: 1em;
-    right: 1em;
-    z-index: 9999;
-    width: 1em;
-    background: white;
-    padding: 1em;
-    height: .5em;
-    transition: .2s all ease-in-out;
-
-    #nav-toggle {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-
-    ul {
-        margin: 0;
-        transform: translateY(3em);
-        transition: .2s all ease-in-out;
-
-        li {
-            list-style: none;
-            margin-bottom: .5em;
-            opacity: 0;
-            transform: translateY(.5em);
-            transition: .2s all ease-in-out; 
-
-            a {
-                color: $yellow;
-                text-decoration: none;
-                font-family: $sans-serif;
-                padding: 0 .25em;
-
-                @include media-query($on-laptop) {
-
-                    &:before {
-                        width: 0;
-                        transition: all .2s ease-in-out;
-                        content: "";
-                        display: block;
-                        height: 1px;
-                        position: absolute;
-                        top: 58%;
-                        left: 0;
-                        transform: translateY(-50%);
-                        background: $background-color;
-                    }
-
-                    &:hover {
-                        background: none;
-                        color: $background-color;
-
-                        &:before {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.active {
-        height: auto;
-        width: 200px;
-        transition-delay: 0s;
-
-        ul {
-            transform: translateY(0);
-
-            li {
-                opacity: 1;
-                transform: translateY(0); 
-                transition-delay: .2s;
-
-                @for $i from 1 through 4 {
-                    &:nth-child(#{$i}) {
-                        transition-delay: ($i / 10) + .2s;
-                    }
-                }
-
-            }
-        }
-    }
-
-    &.close {
-        width: 2em;
-        height: 1.3em;
-        transition-delay: .5s;
-    }
-}
-
-/**
- * Home Page
- */
-
-.left-half {
 
     h1 {
-        font-size: 23vw;
+        font-size: 17vw;
         line-height: 1;
         color: white;
         margin-bottom: .2em;
@@ -197,218 +71,43 @@ nav {
         }
     }
 
-    nav {
-        ul {
-            text-align: center;
-
-            li {
-                display: inline;
-                list-style: none;
-
-                a {
-                    padding: 0 .5em;
-                    color: darken($yellow, 20%);
-                }
-
-                &:hover {
-                    a {
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
-    }
-
-    .social {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-
-        li {
-            display: inline-block;
-            position: relative;
-
-            a {
-                text-decoration: none;
-                padding: 0 .25em;
-
-                @include media-query($on-laptop) {
-
-                    &:before {
-                        width: 0;
-                        transition: all .2s ease-in-out;
-                        content: "";
-                        display: block;
-                        height: 1px;
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        background: yellow;
-                    }
-                }
-            }
-
-            @include media-query($on-laptop) {
-
-                &:hover {
-                    a:before {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
-    .center {
-        text-align: center;
-    }
 }
 
 .right-half {
+    padding: 2em 0;
     background: $background-color; 
     color: white;
+    
+    @include media-query($on-laptop) {
+        overflow-y: scroll;
+    }
 
-    .center {
-        width: 90%;
-        margin: 0 auto;
-        transform: translate(0,0);
-        top: 0;
-        left: 0;
-        position: static;
-        padding: 5em 0 3em;
+    .content {
+        padding: 0 5%;
 
-        @include media-query($on-laptop) {
-            width: 70%;
+        :first-child {
             margin-top: 0;
-            transform: translate(-50%,-50%);
-            position: absolute;
-            top: 50%;
-            left: 50%;
         }
+    }
+
+    h2, h3, h4 {
+        color: darken(white, 45%);
     }
 
     h2 {
         font-family: $sans-serif;
-        font-weight: normal;
         text-transform: uppercase;
-        letter-spacing: 4px;
-        color: darken(white, 45%);
-        position: relative;
-
-        &:before {
-            content: "";
-            position: absolute;
-            top: -1em;
-            left: 0;
-            width: 2em;
-            height: 4px;
-            background: darken(white, 45%);
-        }
+        letter-spacing: 4px; 
     }
 
     p {
         line-height: 1.8; 
     }
+}
 
-    @media screen 
-    and (min-width : 480px) 
-    and (max-width : 900px) 
-    and (max-height : 600px) {
-        p {
-            font-size: 1em;
-        }
+.recent-articles {
+    p {
+        font-size: .9em;
     }
 }
 
-
-/**
- * About Section
-**/
-
-.about {
-    .left-half {
-        background: darken($background-color, 10%);
-        background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(../images/me.jpg) no-repeat center darken($background-color, 10%); 
-        background-size: 100% 100%, cover;
-    }
-}
-
-
-/**
- * Page content
- */
-.page-content {
-    padding: $spacing-unit 0;
-}
-
-.page-heading {
-    font-size: 20px;
-}
-
-.post-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
-    }
-}
-
-.post-meta {
-    font-size: $small-font-size;
-    color: white;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    padding: .2em 0;
-}
-
-.post-link {
-    display: block;
-    font-size: 24px;
-}
-
-
-
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $spacing-unit;
-}
-
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px; 
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
-}
-
-.post-content { 
-    margin-bottom: $spacing-unit; 
-
-    h2 {  
-        font-size: 32px; 
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
-}

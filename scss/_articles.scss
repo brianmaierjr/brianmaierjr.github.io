@@ -16,20 +16,16 @@
 
     .right-half {
         overflow-y: scroll;
-    }
 
-    .post-list {
-        width: 90%;
-        margin: 0 auto;
-        padding: 2em 0;
+        .content {
 
-        @include media-query($on-laptop) {
-            width: 70%;
-            padding: 4em 0;
-        }
+            article {
+                margin-bottom: 2em;
+            }
 
-        .title {
-            margin-bottom: .25em;
+            .title {
+                margin-bottom: .25em;
+            }
         }
     }
 

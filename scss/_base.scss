@@ -14,19 +14,10 @@ dl, dd, ol, ul, figure {
  */
 body {
     font-family: $serif;
-    font-size: 18px;
     line-height: $base-line-height; 
     font-weight: 300; 
-    color: $text-color;
+    color: white;
     background-color: $background-color; 
-    -webkit-text-size-adjust: 100%;
-
-        @include media-query($on-palm) {
-            font-size: 20px; 
-        }
-        @include media-query($on-laptop) {
-            font-size: 22px; 
-        }
 
     a {
         color: $yellow;
@@ -35,6 +26,7 @@ body {
             color: lighten($yellow, 20%);
         }
     }
+
 }
 
 ::selection {
@@ -42,19 +34,6 @@ body {
     color: white;
 }
 
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
-}
-
-p {
-    margin-bottom: $spacing-unit;
-}
 
 /**
  * Images
@@ -84,12 +63,28 @@ img {
 /**
  * Figures
  */
-figure > img {
+figure {
     display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 2.441em auto;
+
+    > img {
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 figcaption {
-    font-size: $small-font-size;
+    position: absolute;
+    bottom: 0; 
+    right: 0;
+    font-size: .8em;
+    color: white;
+    background: rgba(0,0,0,.75);
+    font-style: italic;
+    padding: .4em;
+    color: darken(white, 15%);
 }
 
 
@@ -108,22 +103,6 @@ li {
 }
 
 /**
- * Headings
- */
-
-h1 {
-    font-family: $heading;
-    font-weight: normal;
-}
-
-h2, h3, h4, h5, h6 {
-    font-weight: normal;
-    font-style: normal;
-    letter-spacing: 2px;
-    font-family: $sans-serif;
-}
-
-/**
  * Links
  */
 a {
@@ -134,48 +113,6 @@ a {
     &:hover {
         text-decoration: none;
         color: darken($yellow, 20%);
-    }
-}
-
-/**
- * Blockquotes
- */
-blockquote {
-    color: $grey-color-light;
-    border-left: 4px solid $yellow;
-    padding-left: $spacing-unit / 2;
-    font-size: 1.4em;
-    line-height: 1.8;
-    font-style: italic;
-
-    > :last-child {
-        margin-bottom: 0;
-    }
-}
-
-/**
- * Code formatting
- */
-pre,
-code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
-}
-
-code {
-    padding: 1px 5px;
-}
-
-pre {
-    padding: 8px 12px;
-    overflow-x: scroll;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
     }
 }
 
@@ -207,3 +144,4 @@ pre {
         }
     }
 }
+

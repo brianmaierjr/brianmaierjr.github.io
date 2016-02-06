@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'salomeregular';
+    src: url('../fonts/salome-webfont.eot');
+    src: url('../fonts/salome-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/salome-webfont.woff2') format('woff2'),
+         url('../fonts/salome-webfont.woff') format('woff'),
+         url('../fonts/salome-webfont.ttf') format('truetype'),
+         url('../fonts/salome-webfont.svg#salomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'antoniobold';
+    src: url('../fonts/web-antonio-bold-webfont.eot');
+    src: url('../fonts/web-antonio-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/web-antonio-bold-webfont.woff2') format('woff2'),
+         url('../fonts/web-antonio-bold-webfont.woff') format('woff'),
+         url('../fonts/web-antonio-bold-webfont.ttf') format('truetype'),
+         url('../fonts/web-antonio-bold-webfont.svg#antoniobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+p, blockquote, ul, ol {
+    margin-bottom: 1.3em;
+}
+
+
+/**
+ * Hyphenate
+ */
+
+p {
+    hyphens: auto;
+    word-break: break-word;
+    hyphenate-lines: 3;
+    hyphenate-before: 2;
+    hyphenate-after: 3;
+    font-feature-settings: "linga", "dlig";
+}
+
+/**
+ * Headings
+ */
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+    margin: 1.414em 0 0.5em;
+    font-weight: normal;
+    font-style: normal;
+    font-family: $sans-serif;
+    line-height: 1.2;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.441em;
+    font-family: $heading;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 1.953em;
+    letter-spacing: 2px;
+}
+
+h2 {font-size: 1.953em;}
+
+h3 {font-size: 1.563em;}
+
+h4 {font-size: 1.25em;}
+
+small, .font_small {font-size: 0.8em;}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    color: $grey-color-light;
+    border-left: 4px solid $yellow;
+    padding-left: $spacing-unit / 2;
+    font-size: 1.4em;
+    line-height: 1.8;
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: 15px;
+}
+
+code {
+    padding: 1px 5px;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: scroll;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+

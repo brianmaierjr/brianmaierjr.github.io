@@ -1,10 +1,16 @@
 # Site settings
 title: Brian Maier Jr.
+name: "The portfolio of Brian Maier Jr."
 email: brimaidesigns@gmail.com
 description: Another butcher in the meat market
 baseurl: ""
 url: ""
-permalinks: pretty
+icon:           /favicon/apple-touch-icon-180x180.png 
+author:
+  facebook:     brianmierjr
+  twitter:      brianmaierjr
+  google_plus:  brianmaierjr
+fb_admins:      100003815841225
 
 # Build settings
 markdown: kramdown
