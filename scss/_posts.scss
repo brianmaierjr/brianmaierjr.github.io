@@ -23,7 +23,7 @@
         padding-bottom: 0;
         
         @include media-query($on-laptop) {
-            flex: 1 1 10vw;
+            flex: 1 1 15vw;
         }
     }
 
