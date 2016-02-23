@@ -61,11 +61,15 @@
             h1 {
                 font-family: $condensed;
                 text-transform: uppercase;
-                font-size: 4em;
+                font-size: 3em;
                 margin: 0 auto;
                 line-height: 1.2;
                 border-bottom: 4px solid $grey-color;
                 padding-bottom: .3em;
+
+                @include media-query($on-laptop) {
+                   font-size: 4em; 
+                }
             }
             
             p {
