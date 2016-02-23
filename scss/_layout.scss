@@ -93,16 +93,6 @@ body {
     h2, h3, h4 {
         color: darken(white, 45%);
     }
-
-    h2 {
-        font-family: $sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 4px; 
-    }
-
-    p {
-        line-height: 1.8; 
-    }
 }
 
 .recent-articles {

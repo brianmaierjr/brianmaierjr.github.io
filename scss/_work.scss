@@ -2,15 +2,166 @@
 
     .left-half {
         background: darken($background-color, 10%);
-        background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(../images/work.jpg) no-repeat center darken($background-color, 10%); 
-        background-size: 100% 100%, cover;
+        background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%) darken($background-color, 10%); 
+        background-size: 100% 100%;
 
         .content {
         }
     }
 
     .right-half {
+        padding: 0;
+
         .content {
+            padding: 0;
+
+            .project {
+                color: white;
+                padding: 2em 0; 
+                text-align: center;
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                font-family: $condensed;
+                text-transform: uppercase;
+                font-size: 2em;
+                background-size: cover;
+                position: relative;
+
+                &:before {
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0,0,0,.2);
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                span {
+                   position: relative; 
+                }
+            }
+
+            .sd { background: url(../images/sd/sd-desktop-home.jpg); }
+            .oyl { background: url(../images/oyl/oyl-desktop-home.jpg); }
         }   
     }
+}
+
+
+/** Projects **/
+
+#project {
+    position: fixed;
+    display: none;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    text-align: center;
+    color: $grey-color-dark;
+
+    figcaption {
+        background: transparent;
+        position: relative;
+        color: $grey-color;
+    }
+
+    h1 {
+        font-family: $condensed;
+        text-transform: uppercase;
+        font-size: 4em;
+        margin-bottom: 0;
+        margin-top: 1em;
+    }
+
+    .project-details {
+        font-style: italic;
+        color: $grey-color;
+        position: relative;
+        margin: 1.6em auto;
+
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            width: 4em;
+            height: 4px;
+            background: $grey-color-light;
+            position: absolute;
+            top: -1em;
+            left: 50%;
+            margin-left: -2em;
+        }
+
+        &:after {
+            top: calc(100% + 1em);
+        }
+    }
+
+    h2 {
+        margin: 1.41em 0 .5em;
+        color: white;
+    }
+
+    p {
+        width: 90%;
+        max-width: 700px;
+        margin: 0 auto 1.3em;
+    }
+
+    .project-section {
+        background: $background-color;
+        color: white;
+        padding: 1.5em 0;
+
+        h2 {
+            margin-top: 0;
+        }
+
+        p {
+            text-align: left;
+        }
+    }
+
+    .share {
+        margin-top: 0;
+        color: white;
+    }
+}
+
+.projectClose {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    border: 4px solid $yellow;
+    padding: .5em 1em;
+    text-decoration: none;
+    transition-delay: .2s;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: $yellow;
+        z-index: -1;
+        transition: .2s all ease-in-out;
+    }
+
+    &:hover {
+        color: white;
+
+        &:before {
+            width: 102%;
+        }
+   } 
 }

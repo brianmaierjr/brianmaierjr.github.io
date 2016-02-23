@@ -13,7 +13,8 @@ module.exports = function(grunt) {
                options: {
                     serve: true,
                     dest: '_site',
-                    config: '_config-dev.yml'
+                    config: '_config-dev.yml',
+                    watch: true
                 }
             },
             build: {
@@ -93,10 +94,6 @@ module.exports = function(grunt) {
             }
         },
        watch: {
-         site: {
-           files: ["*.html", "_layouts/*.html", "_posts/*.md", "_projects/*.md", "_includes/*.html"],
-           tasks: ["jekyll:build"]
-         },
          js: {
            files: ["js/*.js", "!js/scripts.min.js", "!js/vendor.min.js"],
            tasks: ["uglify"]
@@ -117,6 +114,6 @@ module.exports = function(grunt) {
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask("default", ["concurrent:dev"]);
-    grunt.registerTask("production", ["jekyll:build"]);
+    grunt.registerTask("production", ["jekyll:production"]);
 
 };

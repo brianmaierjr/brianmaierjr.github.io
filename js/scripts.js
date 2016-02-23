@@ -18,6 +18,7 @@ $(document).ready(function() {
         }, false);
     };
 
+    // Animsition
     $(".animsition").animsition({
         inClass: 'fade-in',
         outClass: 'fade-out',
@@ -46,8 +47,6 @@ $(document).ready(function() {
       e.preventDefault();
       windowPopup($(this).attr("href"), 500, 300);
     });
-
-
 
 });
 

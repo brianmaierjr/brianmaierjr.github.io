@@ -24,11 +24,9 @@
 
 }
 
-
 p, blockquote, ul, ol {
     margin-bottom: 1.3em;
 }
-
 
 /**
  * Hyphenate
@@ -67,6 +65,7 @@ h1 {
 h2 {
     font-size: 1.953em;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 h2 {font-size: 1.953em;}
