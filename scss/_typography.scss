@@ -32,9 +32,10 @@ p, blockquote, ul, ol {
  * Hyphenate
  */
 
-p {
+p, .post-header, .title {
     hyphens: auto;
     word-break: break-word;
+    word-wrap: break-word;
     hyphenate-lines: 3;
     hyphenate-before: 2;
     hyphenate-after: 3;

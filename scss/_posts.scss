@@ -33,6 +33,10 @@
           padding: 0 5%; 
         }
 
+        #disqus_thread {
+            padding-top: 2em;
+        }
+
         ul {
             margin-left: 2em;
         }
@@ -93,7 +97,7 @@
  */
 
 .share {
-    margin: 4em 0 0 0;
+    margin: 2em 0 0 0;
     font-family: $sans-serif;
     font-size: .8em;
     text-align: center;

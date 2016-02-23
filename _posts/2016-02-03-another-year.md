@@ -4,7 +4,7 @@ Title: "Another Year"
 image: new-year.jpg
 ---
 
-Once again it's another year and with it another new site.
+Once again it's another year and with it another new site. A newer, better, faster site.
 
 I'm still working on many things. If you see anything weird <a href="mailto:brianmaierjr@gmail.com">let me know about it</a>.
 
@@ -13,6 +13,6 @@ I'm still working on many things. If you see anything weird <a href="mailto:bria
 - Social links customizing
 - Look for unused css
 - Page speed optimizing
-- Work pages
+- Work pages with Ajax
 - Clean up articles and write more
-- Implement BEM
+- Implement BEM better
