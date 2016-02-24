@@ -13,15 +13,15 @@ Sed facilisis turpis a justo rutrum, sit amet vulputate neque sodales. Curabitur
 ## Heading 2
 Mauris velit felis, gravida vitae molestie eu, fermentum sit amet ligula. Fusce vehicula orci non nibh auctor, nec tincidunt risus tempor. Vivamus malesuada et augue eget porta. Sed cursus nulla ipsum. Quisque volutpat massa in lorem aliquet porttitor adipiscing eget libero. Mauris ac porta metus, viverra imperdiet nisi. Quisque et pretium mi. Donec dignissim venenatis eros porta rhoncus. Aenean mattis, lacus vel condimentum ullamcorper, mauris nulla sodales ligula, id pretium quam diam sit amet urna. Mauris vel gravida purus. Etiam mauris odio, sagittis vulputate lectus non, ornare egestas ipsum. Aliquam eget sem fringilla, ultrices lectus ut, pellentesque mi. Vivamus et dui mi. Nunc a blandit magna, vitae congue dolor. Vivamus urna tellus, vulputate at rutrum eu, pharetra at sapien. Integer rutrum, lectus sit amet lobortis tempor, nulla augue commodo neque, a blandit ligula diam sit amet ante.
 
-<figure><img class="lazy" data-src="/images/articles.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  alt="" /></figure>
-
-<img data-src="http://lorempixel.com/g/800/500/city/1" data-src-retina="http://lorempixel.com/g/1280/800/city/1" src="http://lorempixel.com/g/800/500/city/1">
-
-<img data-src="http://lorempixel.com/g/800/500/city/1" data-src-retina="http://lorempixel.com/g/1280/800/city/1" src="http://lorempixel.com/g/800/500/city/1">
-
-<img data-src="http://lorempixel.com/g/800/500/city/1" data-src-retina="http://lorempixel.com/g/1280/800/city/1" src="http://lorempixel.com/g/800/500/city/1">
-
-<img data-src="http://lorempixel.com/g/800/500/city/1" data-src-retina="http://lorempixel.com/g/1280/800/city/1" src="http://lorempixel.com/g/800/500/city/1">
+<figure>
+    <img
+    sizes="(min-width: 800px) 65vw, 100vw"
+    src="/images/articles-small.jpg"
+    srcset="/images/articles-medium.jpg 600w,
+           /images/articles-large.jpg 800w,
+           /images/articles-xlarge.jpg 1000w"
+    alt="" />
+</figure>
 
 Nulla facilisi. Donec dictum, neque vitae sagittis eleifend, magna elit rutrum orci, nec venenatis nisi orci sed eros. Praesent mollis sagittis tempus. Maecenas varius tellus eget venenatis commodo. Vestibulum hendrerit mattis consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit dictum lacus, in hendrerit mauris cursus ut.
 
@@ -36,8 +36,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas viverra elit u
 
 Mauris velit felis, gravida vitae molestie eu, fermentum sit amet ligula. Fusce vehicula orci non nibh auctor, nec tincidunt risus tempor. Vivamus malesuada et augue eget porta. Sed cursus nulla ipsum. Quisque volutpat massa in lorem aliquet porttitor adipiscing eget libero. Mauris ac porta metus, viverra imperdiet nisi. Quisque et pretium mi. Donec dignissim venenatis eros porta rhoncus. Aenean mattis, lacus vel condimentum ullamcorper, mauris nulla sodales ligula, id pretium quam diam sit amet urna. Mauris vel gravida purus. Etiam mauris odio, sagittis vulputate lectus non, ornare egestas ipsum. Aliquam eget sem fringilla, ultrices lectus ut, pellentesque mi. Vivamus et dui mi. Nunc a blandit magna, vitae congue dolor. Vivamus urna tellus, vulputate at rutrum eu, pharetra at sapien. Integer rutrum, lectus sit amet lobortis tempor, nulla augue commodo neque, a blandit ligula diam sit amet ante.
 
-<figure><img class="lazy" data-src="/images/articles.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  alt="" /></figure>
-
+<figure>
+    <img
+    sizes="(min-width: 800px) 65vw, 100vw"
+    src="/images/articles-small.jpg"
+    srcset="/images/articles-medium.jpg 600w,
+           /images/articles-large.jpg 800w,
+           /images/articles-xlarge.jpg 1000w"
+    alt="" />
+</figure>
 
 Nulla facilisi. Donec dictum, neque vitae sagittis eleifend, magna elit rutrum orci, nec venenatis nisi orci sed eros. Praesent mollis sagittis tempus. Maecenas varius tellus eget venenatis commodo. Vestibulum hendrerit mattis consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit dictum lacus, in hendrerit mauris cursus ut.
 

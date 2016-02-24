@@ -14,6 +14,14 @@ body {
     }
 }
 
+.flex__container {
+    display: flex;
+}
+
+.flex__item {
+    flex: 1;
+}
+
 /**
  * Main Layout 
  */
@@ -45,8 +53,18 @@ body {
     position: relative;
     min-height: 100vh;
     background: darken($background-color, 10%);
-    background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(../images/left-bg.jpg) no-repeat center darken($background-color, 10%); 
+    background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(../images/left-bg-small.jpg) no-repeat center darken($background-color, 10%); 
     background-size: 100% 100%, cover;
+
+        @include media-query($on-laptop) {
+            background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(../images/left-bg-medium.jpg) no-repeat center darken($background-color, 10%); 
+            background-size: 100% 100%, cover;
+        }
+
+        @include media-query($on-laptop) {
+            background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(../images/left-bg-large.jpg) no-repeat center darken($background-color, 10%); 
+            background-size: 100% 100%, cover;
+        }
 
     .content {
         text-align: center;

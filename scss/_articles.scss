@@ -2,9 +2,19 @@
 
     .left-half {
         background: darken($background-color, 10%);
-        background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(../images/articles.jpg) no-repeat center darken($background-color, 10%); 
+        background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(../images/articles-med.jpg) no-repeat center darken($background-color, 10%); 
         background-size: 100% 100%, cover;
 
+        @include media-query($on-laptop) {
+            background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(../images/articles-large.jpg) no-repeat center darken($background-color, 10%); 
+            background-size: 100% 100%, cover;
+        }
+
+        @include media-query($on-laptop) {
+            background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%), url(../images/articles-xlarge.jpg) no-repeat center darken($background-color, 10%); 
+            background-size: 100% 100%, cover;
+        }
+        
         h1 {
             font-size: 18vw;
 
