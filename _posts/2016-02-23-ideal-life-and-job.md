@@ -4,7 +4,7 @@ title: "Ideal Life and Job Characteristics"
 image: ideal-life-and-job.jpg
 ---
 
-My first assignment for the Unstoppable course I am taking at work calls for listing 10 characteristics of an ideal life and job.
+What are my ideal characteristics for my life and job? 
 
 <div class="flex__container">
     <div class="flex__item">
