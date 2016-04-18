@@ -4,7 +4,7 @@ title: "Stand and Passion"
 image: stand-and-passion.jpg
 ---
 
-##Stand
+## Stand
 
 **What would I do if I knew I only had one year to live?**
 
@@ -46,7 +46,7 @@ I guess it really depends on the situation? The term inside deal is so broad I d
 
 I would most likely listen and offer alternatives to talking about someone else and instead focusing on ourselves.
 
-##My Stand
+## My Stand
 
 Passion
 **What books, movies, art, or music get you pumped?**
