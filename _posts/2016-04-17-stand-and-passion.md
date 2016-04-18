@@ -4,6 +4,8 @@ title: "Stand and Passion"
 image: stand-and-passion.jpg
 ---
 
+This is my attempt to relax, contemplate and then answer two sets of questions in an attempt to Build My Stand and Discover My Passion. What if I find out I'm a terrible person?
+
 ## Stand
 
 **What would I do if I knew I only had one year to live?**
