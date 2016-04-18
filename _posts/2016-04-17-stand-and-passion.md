@@ -46,9 +46,8 @@ I guess it really depends on the situation? The term inside deal is so broad I d
 
 I would most likely listen and offer alternatives to talking about someone else and instead focusing on ourselves.
 
-## My Stand
+## Passion
 
-Passion
 **What books, movies, art, or music get you pumped?**
 
 *Books:* The Age of Reason, The Alchemist, Buddhism without Beliefs. Books that offer wise wisdom and help me become a better version of myself without requiring a doctrine.
