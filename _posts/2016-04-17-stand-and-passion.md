@@ -8,7 +8,7 @@ This is my attempt to relax, contemplate and then answer two sets of questions i
 
 ## Stand
 
-**What would I do if I knew I only had one year to live?**
+### What would I do if I knew I only had one year to live?
 
 Spend as much time as possible with friends and family.
 
