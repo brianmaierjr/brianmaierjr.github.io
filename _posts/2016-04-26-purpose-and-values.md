@@ -23,28 +23,17 @@ I am a creative. I love making things digitally and especially by hand. I am nev
 
 ## Values
 
-Always be honest
-
-Never stop learning
-
-Seek perfection
-
-Enhance my confidence
-
-Always encourage humor
-
-Love compassionately
-
-Seek the truth
-
-Be original
-
-Seek calmness
-
-Induldge in creativity
-
-Keep it Positive
-
-Stay Thankful
+- Always be honest
+- Never stop learning
+- Seek perfection
+- Enhance my confidence
+- Always encourage humor
+- Love compassionately
+- Seek the truth
+- Be original
+- Seek calmness
+- Induldge in creativity
+- Keep it Positive
+- Stay Thankful
 
 
