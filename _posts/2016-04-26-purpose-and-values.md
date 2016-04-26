@@ -14,7 +14,7 @@ I desire to be outside in nature. Sitting in this cube now I am longing to be ou
 
 I really enjoy helping others. I don't particularly do common things like volunteer, etc. but if I see someone in need I enjoy being the one who stops and helps. I like the idea of doing this behind the scenes instead of making a show out of it as some people do. 
 
-I am a creative. I love making things digitally and especially by hand. I am never satisfied with what I make but I always enjoy the process and am always improving. I am constantly involved in many projects that range from fine art to music to web design. I really enjoy being surrounded by people who are also creative. Growing up all of my friends were musicians and artists and after moving away from my hometown of Cincinnati has me craving being around them again. 
+I am a creative. I love making things digitally and especially by hand. I am never satisfied with what I make but I always enjoy the process and am always improving. I am constantly involved in many projects that range from fine art to music to web design. I really enjoy being surrounded by people who are also creative. Growing up all of my friends were musicians and artists and after moving away from my hometown of Cincinnati I’m craving being around them again. 
 
 ### Purpose Summary
 
