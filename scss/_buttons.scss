@@ -1,0 +1,13 @@
+@mixin button() {
+    display: inline-block;
+    border-radius: 4px;
+    background: rgba(0,0,0,.2);
+    color: white;
+    padding: .5em 1.5em;
+    transition: .2s all ease-in-out;
+
+    &:hover {
+        background: rgba(0,0,0,.6);
+    }
+}
+

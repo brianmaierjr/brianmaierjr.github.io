@@ -94,6 +94,10 @@ module.exports = function(grunt) {
             }
         },
        watch: {
+         html: {
+            files: "*.html",
+            tasks: ["jekyll:build"]
+         },
          js: {
            files: ["js/*.js", "!js/scripts.min.js", "!js/vendor.min.js"],
            tasks: ["uglify"]
@@ -114,6 +118,6 @@ module.exports = function(grunt) {
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask("default", ["concurrent:dev"]);
-    grunt.registerTask("production", ["jekyll:production"]);
+    grunt.registerTask("production", ["critical", "jekyll:production"]);
 
 };

@@ -1,53 +1,66 @@
 .work {
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
 
-    .left-half {
-        background: darken($background-color, 10%);
-        background: linear-gradient(to right bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.25) 50%) darken($background-color, 10%); 
-        background-size: 100% 100%;
+    .project {
+        display: block;
+        min-height: 500px;
+        position: relative;
+        background-position: 95% 2em;
+        background-size: 60% auto;
+        background-repeat: no-repeat;
 
-        .content {
+        .project__about {
+            width: 35%;
+            padding: 2em;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            transition: .2s all ease-in-out;
+
+
+            h2 {
+                font-family: $condensed;
+                margin-top: 0;
+                margin-bottom: .2em;
+                font-size: 2em;
+            }
+
+            .role {
+                font-size: .9em;
+                font-style: italic;
+                color: rgba(0,0,0,.4);
+                margin: 0 0 1em;
+            }
+
+            a {
+                @include button();
+            }
+        }
+
+        &:hover {
+            .project__about {
+                transform: translate(2em, -50%);
+            }
+        }
+ 
+        a {
+           color: white;
+           text-decoration: none;
         }
     }
 
-    .right-half {
-        padding: 0;
-
-        .content {
-            padding: 0;
-
-            .project {
-                color: white;
-                padding: 2em 0; 
-                text-align: center;
-                text-decoration: none;
-                display: block;
-                width: 100%;
-                font-family: $condensed;
-                text-transform: uppercase;
-                font-size: 2em;
-                background-size: cover;
-                position: relative;
-
-                &:before {
-                    width: 100%;
-                    height: 100%;
-                    background: rgba(0,0,0,.2);
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
-
-                span {
-                   position: relative; 
-                }
-            }
-
-            .sd { background: url(../images/sd/sd-desktop-home.jpg); }
-            .oyl { background: url(../images/oyl/oyl-desktop-home.jpg); }
-        }   
+    .sd { 
+        background-color: #be2026; 
+        background-image: url(/images/sd/sd-desktop-home.jpg);
     }
+    .oyl { background: #5c6b80; }
+    .stacks { background: #6cb593; }
+    .pplus { background: #333; }
+    .lesley { background: #004C45; }
+    .logos-lettering { background: #3B0723; }
 }
 
 
