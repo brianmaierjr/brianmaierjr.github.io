@@ -4,6 +4,8 @@ title: "Purpose and Values"
 image: ideal-life-and-job.jpg
 ---
 
+After establishing my stand and passions I attempt to discover my Purpose and Values, keyword “attempt”.
+
 ## Purpose
 
 I love to be physically active. Ever since a young age I was involved in sports and other activities. After losing 45lbs one summer I realized how important being in shape was. Unfortunately life took hold and now after 10 years, 1 kid and plenty of anxiety I am heavier than ever and starting to work out again.
