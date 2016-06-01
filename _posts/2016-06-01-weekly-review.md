@@ -18,8 +18,4 @@ I plan on doing this review every Friday afternoon or Monday morning. I may try 
 
 ## **UPDATE**
 
-After doing my weekly review I can honestly say I'm surpised at how much progress I've made already. I actually found a couple things that needed to be checked off and wow that felt good. Keeping my goals in Nozbe allows me to allows be on a steady path and I can see nothing but success in this next year.
-
-
-
-
+After doing my weekly review I can honestly say I'm surpised at how much progress I've made already. I actually found a couple things that needed to be checked off and wow that felt good. Keeping my goals in Nozbe allows me to be on a steady path and I can see nothing but success in this next year.
