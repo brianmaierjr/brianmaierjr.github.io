@@ -14,9 +14,9 @@ Creating an agenda for my soon to be Weekly Review.
 6. Find any next actions for tasks/project that need them.
 7. Meditate while picturing what my goals would look like complete.
 
-I plan on doing this review every Friday afternoon or Monday morning. I may try both to see what works best for me. I have to say I'm extremely excited to tackle this because I believe my previouis attempts fell short without a review system like this. 
+I plan on doing this review every Friday afternoon or Monday morning. I may try both to see what works best for me. I have to say I'm extremely excited to tackle this because I believe my previous attempts fell short without a review system like this. 
 
-**UPDATE**
+## **UPDATE**
 
 After doing my weekly review I can honestly say I'm surpised at how much progress I've made already. I actually found a couple things that needed to be checked off and wow that felt good. Keeping my goals in Nozbe allows me to allows be on a steady path and I can see nothing but success in this next year.
 
