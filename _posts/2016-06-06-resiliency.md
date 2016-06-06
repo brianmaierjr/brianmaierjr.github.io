@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Resiliency"
-image: resiliency.jpg
+image: resliency.jpg
 ---
 
 According to the Resiliency Quiz I am very resilient! How do I feel about this?
