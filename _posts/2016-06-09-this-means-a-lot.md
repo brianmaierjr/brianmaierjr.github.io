@@ -10,7 +10,7 @@ The most positive feedback was basically hearing about my strengths from this cl
 
 Based on the emails these are the two biggest areas in my life that I need to improve:
 
-1. Honesty - I know that sometimes I can be too brutally honest and it comes off insensitive. I guess I expect others to give me the same feedback but really it just comes off as me being a jerk. Point taken.
+1. Honesty - I know that sometimes I can be too brutally honest and it comes off as insensitive. I guess I expect others to give me the same feedback but really it just comes off as me being a jerk. Point taken.
 2. Confidence - Something I have always struggled with. I'm one of those people who can't "fake it until you make it" I tend to be too honest and put all my insecurites and inabilites out there.
 
 I have generally approached both of these areas with the same philosophy, treat people how you want to be treated. I give people brutally honest feedback because I give myself honest feedback and in return expect that from all my peers. As far as confidence I am only as confident as I feel and I can't fake it or I have trouble looking to positives because it seems like it is just sugar coating the situation.
