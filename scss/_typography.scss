@@ -1,45 +1,7 @@
-@font-face {
-    font-family: 'salomeregular';
-    src: url('../fonts/salome-webfont.eot');
-    src: url('../fonts/salome-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/salome-webfont.woff2') format('woff2'),
-         url('../fonts/salome-webfont.woff') format('woff'),
-         url('../fonts/salome-webfont.ttf') format('truetype'),
-         url('../fonts/salome-webfont.svg#salomeregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-@font-face {
-    font-family: 'antoniobold';
-    src: url('../fonts/web-antonio-bold-webfont.eot');
-    src: url('../fonts/web-antonio-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/web-antonio-bold-webfont.woff2') format('woff2'),
-         url('../fonts/web-antonio-bold-webfont.woff') format('woff'),
-         url('../fonts/web-antonio-bold-webfont.ttf') format('truetype'),
-         url('../fonts/web-antonio-bold-webfont.svg#antoniobold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
+@import url('https://fonts.googleapis.com/css?family=Rubik+One');
 
 p, blockquote, ul, ol {
     margin-bottom: 1.3em;
-}
-
-/**
- * Hyphenate Headings
- */
-
-.post article header h1 {
-    hyphens: auto;
-    word-break: break-word;
-    word-wrap: break-word;
-    hyphenate-lines: 3;
-    hyphenate-before: 2;
-    hyphenate-after: 3;
-    font-feature-settings: "linga", "dlig";
 }
 
 /**
@@ -52,14 +14,15 @@ h1, h2, h3, h4 {
     margin: 1.414em 0 0.5em;
     font-weight: normal;
     font-style: normal;
-    font-family: $sans-serif;
     line-height: 1.2;
 }
 
 h1 {
     margin-top: 0;
     font-size: 2.441em;
+    font-weight: bold;
     font-family: $heading;
+    text-transform: uppercase;
     font-weight: normal;
 }
 

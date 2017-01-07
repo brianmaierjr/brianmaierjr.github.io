@@ -1,17 +1,13 @@
-// Google Fonts
-@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Montserrat);
-
 // Our variables
-$serif:            'Lora', Georgia, serif;
-$heading:           'salomeregular', cursive;
-$sans-serif:	   'Montserrat', sans-serif;
-$condensed:         'antoniobold', impact, sans-serif;
+$serif:            "Courier New", Courier, monospace;
+$heading:          'Rubik One', cursive;
 $base-font-size:   20px;
 $base-line-height: 1.5;
 
 $spacing-unit:     2rem;
 
-$background-color: #373C35;
+$background-color: white;
+$link-color:       #00ABBC;
 $yellow:           darken(yellow, 20%);
 
 $grey-color:       #828282;
@@ -26,21 +22,14 @@ $on-laptop:        800px;
 $on-desktop:       1000px;
 
 @mixin media-query($device) {
-    @media screen and (min-width: $device) {
-        @content;
-    }
+  @media screen and (min-width: $device) {
+    @content;
+  }
 }
 
 @import
         "base",
         "typography",
-        "nav",
-        "buttons",
-        "animsition",
         "layout",
-        "about",
-        "articles",
-        "posts",
-        "work",
-        "syntax-highlighting"
+        "nav"
 ;
