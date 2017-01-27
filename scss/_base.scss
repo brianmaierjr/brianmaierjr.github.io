@@ -98,11 +98,6 @@ li {
     fill: white; 
   }
 
-  h1 svg {
-    max-width: 160px;
-    height: auto;
-  }
-     
    @include media-query($on-laptop) {
      padding: 2em;
 
