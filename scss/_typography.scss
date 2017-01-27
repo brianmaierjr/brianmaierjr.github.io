@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik+One');
+@import url('https://fonts.googleapis.com/css?family=Teko:300|Space+Mono:400,400i,700,700i');
 
 p, blockquote, ul, ol {
     margin-bottom: 1.3em;
@@ -44,8 +44,7 @@ small, .font_small {font-size: 0.8em;}
  * Blockquotes
  */
 blockquote {
-    color: $grey-color-light;
-    border-left: 4px solid $yellow;
+    border-left: 4px solid blue;
     padding-left: $spacing-unit / 2;
     font-size: 1.4em;
     line-height: 1.8;
