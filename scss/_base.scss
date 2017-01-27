@@ -93,9 +93,16 @@ li {
   max-width: 100%;
   margin: 0 auto;
 
-  h1 { color: lighten(#1f1e1f, 20%); }
+  #logo path,
+  #logo polygon { 
+    fill: white; 
+  }
 
-
+  h1 svg {
+    max-width: 160px;
+    height: auto;
+  }
+     
    @include media-query($on-laptop) {
      padding: 2em;
 
