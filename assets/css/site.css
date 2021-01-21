@@ -35,15 +35,15 @@ input, button, textarea, select { font: inherit; }
 
 @font-face { font-family: "hk_groteskbold"; font-display: swap; src: url("../fonts/hkgrotesk-bold-webfont.woff2") format("woff2"), url("../fonts/hkgrotesk-bold-webfont.woff") format("woff"); font-weight: normal; font-style: normal; }
 
-@font-face { font-family: "hk_groteskbold_italic"; font-display: src: url("../fonts/hkgrotesk-bolditalic-webfont.woff2") format("woff2"), url("../fonts/hkgrotesk-bolditalic-webfont.woff") format("woff"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "hk_groteskbold_italic"; font-display: swap;  src: url("../fonts/hkgrotesk-bolditalic-webfont.woff2") format("woff2"), url("../fonts/hkgrotesk-bolditalic-webfont.woff") format("woff"); font-weight: normal; font-style: normal; }
 
-@font-face { font-family: "hk_groteskitalic"; font-display: src: url("../fonts/hkgrotesk-italic-webfont.woff2") format("woff2"), url("../fonts/hkgrotesk-italic-webfont.woff") format("woff"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "hk_groteskitalic"; font-display: swap;  src: url("../fonts/hkgrotesk-italic-webfont.woff2") format("woff2"), url("../fonts/hkgrotesk-italic-webfont.woff") format("woff"); font-weight: normal; font-style: normal; }
 
-@font-face { font-family: "hk_groteskregular"; font-display: src: url("../fonts/hkgrotesk-regular-webfont.woff2") format("woff2"), url("../fonts/hkgrotesk-regular-webfont.woff") format("woff"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "hk_groteskregular"; font-display: swap;  src: url("../fonts/hkgrotesk-regular-webfont.woff2") format("woff2"), url("../fonts/hkgrotesk-regular-webfont.woff") format("woff"); font-weight: normal; font-style: normal; }
 
-@font-face { font-family: "hk_grotesksemibold"; font-display: src: url("../fonts/hkgrotesk-semibold-webfont.woff2") format("woff2"), url("../fonts/hkgrotesk-semibold-webfont.woff") format("woff"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "hk_grotesksemibold"; font-display: swap;  src: url("../fonts/hkgrotesk-semibold-webfont.woff2") format("woff2"), url("../fonts/hkgrotesk-semibold-webfont.woff") format("woff"); font-weight: normal; font-style: normal; }
 
-@font-face { font-family: "Barlow"; font-display: font-style: normal; font-weight: 800; src: local(""), url("../fonts/barlow-v5-latin-800.woff2") format("woff2"), url("../fonts/barlow-v5-latin-800.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+@font-face { font-family: "Barlow"; font-display: swap;  font-style: normal; font-weight: 800; src: local(""), url("../fonts/barlow-v5-latin-800.woff2") format("woff2"), url("../fonts/barlow-v5-latin-800.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
 body { background-color: var(--charcoal); color: white; font-family: var(--font-hk-regular); font-size: var(--root-font-size); line-height: 1.5; border-left: 6px solid var(--purple); }
 
