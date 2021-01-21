@@ -1,3 +1,5 @@
+document.documentElement.classList.remove('no-js');
+
 const links = document.querySelectorAll("a.scroll");
  
 for (const link of links) {
@@ -32,7 +34,7 @@ function clickHandler(e) {
   let windowWidth = window.innerWidth;
 
   function percentage(partialValue, totalValue) {
-    return (50 * partialValue) / totalValue;
+    return (30 * partialValue) / totalValue;
   }
 
   // update the CSS vars within request animation frame
@@ -43,8 +45,8 @@ function clickHandler(e) {
     if (storedXPosition === xPosition && storedYPosition === yPosition) return;
 
     // shift the range from 0 to 100 to -50 to 50 to keep the movement centralised
-    x = percentage(xPosition, windowWidth) - 25;
-    y = percentage(yPosition, windowHeight) - 25;
+    x = percentage(xPosition, windowWidth) - 15;
+    y = percentage(yPosition, windowHeight) - 15;
 
     // update the css vars
     document.documentElement.style.setProperty("--mouse-x", `${x}%`);
@@ -70,3 +72,4 @@ function clickHandler(e) {
   }
   window.addEventListener("resize", updateWindowSize);
 })();
+
