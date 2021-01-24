@@ -33,10 +33,7 @@
   <body>
     
 <header class="section sectionSplit sectionGrid">
-	<!-- <label id="switch" class="switch">
-		<input type="checkbox" onchange="toggleTheme()" id="slider">
-		<span class="slider round"></span>
-	</label> -->
+
 	<div class="header__hero sectionSplit__left">
 		<picture> 
 			<source srcset="assets/img/me.jpg" type="image/jpeg" media="(min-width: 801px)">
@@ -97,7 +94,7 @@
 	</ul>
 </header>
 <main>
-	<section class="experience u-bg--purple section sectionPartial pullLeft">
+	<section data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-offset="200" class="experience u-bg--purple section sectionPartial pullLeft">
 		<svg class="experience__devices" width="299px" height="102px" viewBox="0 0 299 102" version="1.1">
     <title>Group 5 Copy</title>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -120,29 +117,29 @@
 			<p>Check out a select few projects below that I was lucky enough to be part of over the years. For a more up to date look at what I'm doing <a href="https://dribbble.com/brianmaierjr" target="_blank">head over to my Dribbble page</a> and give me a like or two!</p>
 		</div>
 		<div class="work__main">
-			<picture> 
+			<picture data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-offset="200"> 
 				<source srcset="assets/img/degrees-online.jpg" type="image/jpeg" media="(min-width: 801px)">
 				<source srcset="assets/img/degrees-online--sm.jpg" type="image/jpeg" media="(max-width: 800px)">
 				<img src="assets/img/degrees-online.jpg" alt="DegreesOnline.com Website" loading="lazy">
 			</picture>
-			<picture> 
+			<picture data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-offset="200"> 
 				<source srcset="assets/img/oyl.jpg" type="image/jpeg" media="(min-width: 801px)">
 				<source srcset="assets/img/oyl--sm.jpg" type="image/jpeg" media="(max-width: 800px)">
 				<img src="assets/img/oyl.jpg" alt="On Your Left Cycles Website" loading="lazy">
 			</picture>
-			<picture> 
+			<picture data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-offset="200"> 
 				<source srcset="assets/img/shawnee.jpg" type="image/jpeg" media="(min-width: 801px)">
 				<source srcset="assets/img/shawnee--sm.jpg" type="image/jpeg" media="(max-width: 800px)">
 				<img src="assets/img/shawnee.jpg" alt="Shawnee University Online Website" loading="lazy">
 			</picture>
-			<picture> 
+			<picture data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-offset="200">  
 				<source srcset="assets/img/logos.jpg" type="image/jpeg" media="(min-width: 801px)">
 				<source srcset="assets/img/logos--sm.jpg" type="image/jpeg" media="(max-width: 800px)">
 				<img src="assets/img/logos.jpg" alt="Various Logo Designs by Yours Truly" loading="lazy">
 			</picture>
 		</div>
 	</section>
-	<section class="contact section sectionPartial pullLeft u-bg--purple"> 
+	<section data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-offset="200" class="contact section sectionPartial pullLeft u-bg--purple"> 
 		<div class="contact__content">
 			<h2>Let's Make Something Together</h2>
 			<p>Get in touch with me to talk about whatever project you have on the horizon. Even if I'm not a good fit, I'll do my best to get you moving in the right direction. I can also be found doing work with the amazing creatives at <a href="https://etherblk.com" target="_blank">Etherblack Industries</a> where we offer even more services!</p>
@@ -197,6 +194,9 @@
 </footer>
 
 <script src="/assets/js/scripts.js"></script>
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script> 
+<script>
+	AOS.init();
+</script>
   </body>
 </html>
